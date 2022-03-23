@@ -1,0 +1,15 @@
+{
+  "index": {
+    "title": "Introduction",
+    "type": "page",
+    "hidden": true
+  },
+  "docs": {
+    "title": "Manuel",
+    "type": "page"
+  },
+  "examples": {
+    "title": "Exemples",
+    "type": "page"
+  }
+}
