@@ -27,7 +27,7 @@ const FEEDBACK_LINK_WITH_TRANSLATIONS = {
 
 export default {
   projectLink: "https://github.com/lheinitz20/ipa-animation",
-  docsRepositoryBase: "https://github.com/lheinitz20/ipa-animation",
+  docsRepositoryBase: "https://github.com/lheinitz20/ipa-manual",
   titleSuffix: " – Portfolio-Animation",
   search: true,
   unstable_flexsearch: true,
