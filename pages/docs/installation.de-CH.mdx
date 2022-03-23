@@ -3,4 +3,67 @@ title: Installation
 ---
 import Callout from 'nextra-theme-docs/callout'
 
-# Test
+# Installation
+
+## Von GitHub herunterladen
+
+Über [diesen Link](https://github.com/lheinitz20/ipa-animation/archive/refs/heads/main.zip) kannst du das gesamte Framework über GitHub herunterladen.
+
+Danach muss der verzippte Ordner im gewünschten Verzeichnis entpackt werden.
+
+## Per Kommandozeile herunterladen
+
+1. Kopiere den Link unter Code
+
+![Github Link](https://raw.githubusercontent.com/lheinitz20/ipa-manual/main/public/github_code_link.png)
+
+2. Mit dem Befehl und dem zuvor kopierten Link kannst du nun das Repository in das gewünschte Verzeichnis klonen
+``` plaintext 
+git clone https://github.com/lheinitz20/ipa-animation.git
+``` 
+
+<span id="sidebar-and-anchor-links" />
+<Callout>
+  Mit dem Befehl `cd` kannst du per Befehlszeile in ein beliebiges Verzeichnis navigieren. [Hier](https://www.ibm.com/docs/de/aix/7.1?topic=directories-changing-another-directory-cd-command) mehr zu diesem Befehl.
+</Callout>
+
+## Node.js
+
+<Callout type="warning" emoji="⚠️">
+  Ohne Node.js kann das Framework nicht ausgeführt werden
+</Callout>
+
+![Node.js Downloads](https://github.com/lheinitz20/ipa-manual/blob/main/public/nodejs-downloads.png)
+1. Zuerst muss die für das aktuelle Betriebssystem passende [Installationsdatei](https://nodejs.org/de/download/) auf der offizielen Seite von Node.js heruntergeladen und ausgeführt werden
+2. Nun sollte überprüft werden ob die Installation erfolgreich war. <br/>
+
+Mit dem Befehl
+```plaintext
+npm -version
+````
+    kann die Version von Node.js überprüft werden
+
+## Starten
+
+<Callout emoji="✅">
+  Nun kann das Framework auch schon gestartet werden
+</Callout>
+
+### Wichtige Befehle
+
+Die Anwendung wird für die Produktionsnutzung erstellt
+```plaintext
+npm build
+```
+Startet das Next.js Framework
+```plaintext
+npm start
+````
+Startet das Next.js Framework im Entwicklungsmodus
+```plaintext
+npm dev
+````
+
+<Callout>
+Ist das Framework gestartet, kann die Webseite unter `http://localhost:3000` aufgerufen werden
+</Callout>

@@ -1,0 +1,22 @@
+---
+title: Konfiguration
+---
+import Callout from 'nextra-theme-docs/callout'
+
+# Konfiguration
+
+Standardmässig wird beim Starten des Frameworks der Port `3000` verwendet. Läuft per Zufall bereits ein anderer Web-Dienst mit diesem Port wird der Port des Next.js Frameworks im Entwicklungsmodus automatisch angepasst.
+<Callout type="warning" emoji="⚠️">
+Anders als im Entwicklungsmodus kann das Framework in so einem Fall nicht gestartet werden.
+</Callout>
+
+<Callout>
+Mit dem Befehl `npm run dev -- -p 3005` kann der Port manuell geändert werden.
+</Callout>
+
+## Ordnerstruktur
+
+Die Dateien im Stammverzeichnis haben alle ihre Richtigkeit. Die Namen sollten nicht verändert werden.
+Das <strong>public-Verzeichnis</strong> hat eine bestimmte Struktur.
+
+![Ordnerstruktur /public](https://github.com/lheinitz20/ipa-manual/blob/main/public/public-files.png)
