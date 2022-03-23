@@ -1,4 +1,11 @@
 {
-  "installation": "Installation",
-  "configuration": "Configuration"
+  "installation": { 
+    "title": "Installation" 
+  },
+  "configuration": { 
+    "title": "Configuration" 
+  },
+  "adjustments": { 
+    "title": "Adjustments" 
+  }
 }
