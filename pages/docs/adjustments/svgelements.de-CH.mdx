@@ -1,0 +1,77 @@
+---
+title: SVG-Elemente
+---
+
+import Callout from 'nextra-theme-docs/callout'
+
+# Anpassungen
+
+In diesem Abschnitt wird gezeigt, wie die verschiedenen Objekte innerhalb des Quellcodes anzupassen sind.
+
+## SVG-Elemente
+
+### Farben
+```jsx {5-6}
+{/* Hebel als SVG eingefügt */}
+<svg className={styles.production_lever} version="1.1" id="Layer_1" 
+xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 217.2 212">
+    <style type="text/css">{`
+        .st0l{fill:#FFFFFF;}
+        .st1l{fill:#151515;}
+    `}</style>
+    <g id="Layer_1">
+        <path id="Rechteck_23" className="st0l" d="M190.2,0h17c5.5,0,10,4.5,10,10v192c0,
+        5.5-4.5,10-10,10h-17c-5.5,0-10-4.5-10-10V10 C180.2,4.5,184.7,0,190.2,0z"/>
+        <g className={styles.lever_stick}>
+            <rect id="Rechteck_24" x="163.4" y="29.1" transform="matrix(0.8746 -0.4848 0.4848 
+            0.8746 -29.1128 95.6917)" className="st0l" width="14" height="150.1"/>
+            <circle id="Ellipse_25" className="st1l" cx="132.2" cy="33" r="21"/>
+        </g>
+    </g>
+</svg>
+```
+Beim <strong>markierten Bereich</strong> handelt es sich um zwei Klassen innerhalb des SVG-Elements. Durch diese werden die Farben den einzelnen Elementen zugewiesen.
+So können die Farben einer Vektorgrafik durch verändern des Farbcodes angepasst werden. Der Farbcode der ersten Klasse lautet hier wie folgt `#FFFFFF`
+
+<Callout>
+    Mithilfe dieses [Beispiels](/examples/svg-colors) kann das Ganze selbst getestet werden
+</Callout>
+
+### Ersetzen
+
+Ist eine bestimmte Vektorgrafik veraltet oder muss aus anderen Gründen ersetzt werden, muss wie folgt vorgegangen werden:
+
+```jsx {2-17}
+{/* Hebel als SVG eingefügt */}
+<svg className={styles.production_lever} version="1.1" id="Layer_1" 
+xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 217.2 212">
+    <style type="text/css">{`
+        .st0l{fill:#FFFFFF;}
+        .st1l{fill:#151515;}
+    `}</style>
+    <g id="Layer_1">
+        <path id="Rechteck_23" className="st0l" d="M190.2,0h17c5.5,0,10,4.5,10,10v192c0,
+        5.5-4.5,10-10,10h-17c-5.5,0-10-4.5-10-10V10 C180.2,4.5,184.7,0,190.2,0z"/>
+        <g className={styles.lever_stick}>
+            <rect id="Rechteck_24" x="163.4" y="29.1" transform="matrix(0.8746 -0.4848 0.4848 
+            0.8746 -29.1128 95.6917)" className="st0l" width="14" height="150.1"/>
+            <circle id="Ellipse_25" className="st1l" cx="132.2" cy="33" r="21"/>
+        </g>
+    </g>
+</svg>
+```
+
+- Wurde dem SVG-Element wie in diesem Fall eine Klasse `className={styles.production_lever}` mit dem Namen <b>production_lever</b> zugewiesen, sollte diese irgendwo vermerkt werden
+- Nun kann der gesamte SVG-Code gelöscht werden
+- Wichtig ist nun, dass das neue SVG-Element an der <strong>genau gleichen Stelle</strong> eingefügt wird
+- Die zuvor gemerkte Klasse wird nun dem neuen SVG-Element zugewiesen
+
+<Callout emoji="✅">
+    Das Styling der Klasse wird nun auf das neue SVG-Element angewendet. In vielen Fällen wird ein Element mithilfe von Klassen auf der Seite positioniert oder die Klasse dient später der Animation des Elements.
+</Callout>
+
+#### Klassennamen
+
+<Callout type="warning" emoji="⚠️">
+    Es muss darauf geachtet werden, dass die Klassen der einzelnen SVG-Elemente nicht doppelt vorkommen. Ansonsten werden die Style-Eigenschaften überschrieben.
+</Callout>

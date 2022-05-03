@@ -31,15 +31,15 @@
       "server/middleware-runtime.js",
       "server/pages/_middleware.js"
     ],
-    "/docs/adjustments.de-CH": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/docs/adjustments.de-CH.js"
-    ],
     "/docs/installation.de-CH": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/docs/installation.de-CH.js"
+    ],
+    "/index.de-CH": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/index.de-CH.js"
     ]
   },
   "ampFirstPages": []

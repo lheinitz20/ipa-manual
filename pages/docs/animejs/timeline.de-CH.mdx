@@ -1,0 +1,30 @@
+---
+title: Timeline
+---
+
+import Callout from 'nextra-theme-docs/callout'
+
+![animejs-logo](/animejs-v3-logo-animation.gif#animejs-logo)
+
+# Timeline
+
+{
+// anime.js Logo einfügen
+}
+
+[Anime.js](https://animejs.com/) sorgt für die Animation. Es handelt sich um eine JavaScript-Animationsbibliothek. 99% der Bewegungen dieser Animation wurden durch Anime.js ermöglicht.
+Zuerst gilt es, eine globale Timeline zu erstellen. Zu dieser Timeline fügt man dann die verschiedenen Animationen hinzu.
+
+``` jsx {4}
+var basicTimeline = anime.timeline({
+    direction: 'normal',
+    loop: false,
+    autoplay: true
+});
+```
+
+An der Variable <b>basicTimeline</b> sollte an sich nichts verändert werden. Die wichtigste Eigenschaft hierbei ist `autoplay: true` Wird diese auf "false" gesetzt, startet die Animation nicht mehr von alleine. In bestimmten Fällen wird dies evtl. benötigt.
+
+<Callout type="warning" emoji="⚠️">
+    Läuft die Animation auf einem Bildschirm über eine Software wie <b>Xibo</b>, muss die Eigenschaft <b>autoplay</b> zwinged auf <b>"true"</b> gesetzt sein. Ansonsten wird die Animation nicht wiedergegeben!
+</Callout>

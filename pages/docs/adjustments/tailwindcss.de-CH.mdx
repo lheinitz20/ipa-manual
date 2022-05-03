@@ -1,0 +1,43 @@
+---
+title: TailwindCSS
+---
+
+import Callout from 'nextra-theme-docs/callout'
+
+[![tailwindcss](https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Tailwind_CSS_logo.svg/1280px-Tailwind_CSS_logo.svg.png)](https://tailwindcss.com)
+
+Bei TailwindCSS handelt es sich um ein Utility-First-CSS-Framework. Die vorgefertigten Klassen, welche dieses Framework mitsich bringt, ermöglichen ein unkompliziertes Gestalten der verschiedenen Elemente auf einer Webseite. So wurde das auch bei dieser Animation zum Teil genutzt. Die Utility-Klassen werden direkt <b>inline</b> beim jweiligen HTML-Element hinzugefügt.
+
+```jsx
+<div className="flex flex-col justify-between children:font-bold children:text-2xl children:opacity-0">
+```
+
+<Callout>
+  Sämtliche TailwindCSS Klassen und was diese ausrichten kann in der dazugehörigen [Dokumentation](https://tailwindcss.com/docs/installation) nachgelesen werden.
+</Callout>
+
+Bei Bedarf können diese Klassen ganz einfach ausgetauscht oder auch angepasst werden. 
+
+## Custom Styles
+
+TailwindCSS bietet auch die Möglichkeit ganz eigene Klassen mit verschiedensten Eigenschaften zu erstellen. Die Namen können dabei frei gewählt werden.
+
+``` jsx
+theme: {   
+         extend: {
+          transformOrigin: {
+               'camera-on': '38px 202px',
+             }
+         },
+         colors: {
+          secondary: '#B7CAFF',
+        },
+```
+
+## Children Module
+
+Mit diesem Modul können die Utility-Klassen von TailwindCSS auch auf Nachfahren angewendet werden. Wie das funktioniert wird in [diesem Beispiel](/examples/children) sehr gut veranschaulicht.
+
+{
+// Bild/Grafik erstellen & einfügen um Vererbung aufzuzeigen
+}

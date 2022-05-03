@@ -10,5 +10,8 @@
   },
   "adjustments": { 
     "title": "Anpassungen" 
+  },
+  "animejs": {
+    "title": "Anime.js"
   }
 }

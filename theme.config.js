@@ -29,7 +29,9 @@ export default {
   projectLink: "https://github.com/lheinitz20/ipa-animation",
   docsRepositoryBase: "https://github.com/lheinitz20/ipa-manual",
   titleSuffix: " – Portfolio-Animation",
+  darkMode: true,
   search: true,
+  footer: false,
   unstable_flexsearch: true,
   floatTOC: true,
   feedbackLink: () => {

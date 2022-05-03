@@ -1,4 +1,6 @@
 @tailwind utilities;
+@tailwind base;
+@tailwind components;
 
 html {
   font-feature-settings: "rlig" 1, "calt" 1, "ss01" 1, "ss06" 1 !important;
@@ -37,4 +39,8 @@ img[alt='public-files'] {
     width: 100%;
     object-fit: cover;
     object-position: top;
+}
+
+.max-w-\[90rem\] {
+  width: 100% !important;
 }

@@ -1,0 +1,88 @@
+---
+title: Abläufe
+---
+
+import Callout from 'nextra-theme-docs/callout'
+
+# Abläufe
+
+Ein Animationsschritt, welcher der Timeline hinzugefügt wurde sieht im Ganzen etwa so aus:
+
+``` jsx
+.add({
+    targets: '.Animation_parachute__GZcRF',
+    scaleX: 0.2, 
+    scaleY: 0.2, 
+    translateY: '-3000',
+    opacity: 0,
+    duration: 3000,
+    easing: 'easeInOutQuad'
+}, '-=500')
+```
+
+## Eigenschaften
+
+In den nächsten Kapiteln werden die verschiedenen Eigenschaften, welche zur Animation eines Objekts führen, erklärt. Die Werte der verschiedenen Eigenschaften variieren allerdings sehr häufig.
+
+### targets
+
+``` jsx {1}
+targets: '.Animation_whole_robot__Xj3IE',
+```
+
+Bei der Eigenschaft <b>targets</b> geht es darum die Objekte, welche Ziel von der jeweiligen Animation werden sollen, auszuwählen. In diesem Beispiel wurde eine Klasse ausgewählt welche den Fallschirm des Roboters anspricht.
+
+### scale
+
+``` jsx {1-2}
+scaleX: 0.2,
+scaleY: 0.2,  
+```
+
+Danach wird der Fallschirm mit dem Faktor `0.2` in x & y-Richtung skaliert (gestreckt, gestaucht oder verzerrt). Somit wird die Grafik nicht verzerrt, sondern in diesem Sinne nur verkleinert.
+
+### translate 
+
+``` jsx {1}
+translateX: [-340, 300],
+```
+
+Mit der <b>translate-Eigenschaft</b> soll der Fallschirm dann verschoben werden. Hier wird der Roboter auf der <b>y-Achse</b> auf die Koordinate `-3000` verschoben.
+
+<Callout>
+    Der Nullpunkt des [Koordinatensystems](https://tympanus.net/codrops/css_reference/transform/) liegt auf der Seite ganz links oben.
+</Callout>
+
+### opacity
+
+``` jsx 
+opacity: 0,
+```
+
+Diese Eigenschaft kommt in der Animation oft vor. Dadurch dass die Deckkraft auf `0` gesetzt wird, wird der Fallschirm komplett ausgeblendet. Die Deckkraft wird häufig verwendet um verschiedene Elemente der Animation überhaupt erst einzublenden. 
+
+### duration
+
+``` jsx
+duration: 3000,
+```
+
+Mit der <b>duration</b> wird festgelegt wie lange die Durchführung der einzelnen Anpassungen der Eigenschaften dauern soll. Der Wert wird in <b>Millisekunden</b> angegeben.
+
+### easing
+
+``` jsx
+easing: 'easeInOutQuad'
+```
+
+Sogenannte <b>"easing functions"</b> auf Deutsch <b>Übergangsfunktionen</b> bestimmen die Änderungsrate eines Parameteres im Verlauf der Zeit. Dadurch können Bewegungen der Realität angepasst werden.
+
+<Callout>
+    Mehr zu den Übergangsfunktionen kann [hier](https://easings.net/) gefunden werden.
+</Callout>
+
+
+### begin
+
+
+ROTATE FEHLT
